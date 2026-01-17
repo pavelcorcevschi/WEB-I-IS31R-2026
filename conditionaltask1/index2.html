@@ -2,48 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Проверка возраста</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; padding: 30px; line-height: 1.6; }
-        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; max-width: 300px; }
-        input { width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box; }
-        button { background: #28a745; color: white; border: none; padding: 10px 15px; cursor: pointer; width: 100%; border-radius: 4px; }
-        button:hover { background: #218838; }
-        #message { margin-top: 15px; font-weight: bold; text-align: center; }
-    </style>
+    <title>Задание 2</title>
 </head>
 <body>
+    <h2>Проверка возраста</h2>
+    <input type="number" id="ageInput" placeholder="Ваш возраст">
+    <button id="btn2">Проверить доступ</button>
+    <p>Статус: <span id="res2">---</span></p>
 
-    <div class="card">
-        <h3>Контроль доступа</h3>
-        <label for="ageInput">Введите ваш возраст:</label>
-        <input type="number" id="ageInput" placeholder="Например: 18">
-        <button onclick="handleCheck()">Проверить доступ</button>
-        <div id="message"></div>
-    </div>
-
-    <script>
-        function handleCheck() {
-            const input = document.getElementById('ageInput');
-            const messageDiv = document.getElementById('message');
-            const age = parseInt(input.value);
-
-            // Проверка на корректность ввода
-            if (isNaN(age)) {
-                messageDiv.innerText = "Пожалуйста, введите число";
-                messageDiv.style.color = "orange";
-                return;
-            }
-
-            // Наша логика if-else
-            if (age >= 18) {
-                messageDiv.innerText = "Доступ разрешен: Вы совершеннолетний";
-                messageDiv.style.color = "green";
-            } else {
-                messageDiv.innerText = "Доступ запрещен: Вам нет 18 лет";
-                messageDiv.style.color = "red";
-            }
-        }
-    </script>
+    <script src="script2.js"></script>
 </body>
 </html>
